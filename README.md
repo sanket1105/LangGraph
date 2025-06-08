@@ -10,7 +10,8 @@ This repository contains a collection of examples and implementations using Lang
 │   ├── React.py         # ReAct pattern agent with mathematical tools
 │   ├── MemoryAgent.py   # Agent with memory capabilities
 │   ├── Bot.py           # Basic bot implementation
-│   └── Drafter.py       # Document drafting and editing agent
+│   ├── Drafter.py       # Document drafting and editing agent
+│   └── RAGagent.py      # RAG-based agent for document Q&A
 ├── Graphs/              # Jupyter notebooks with graph examples
 │   ├── HelloWorld.ipynb # Basic LangGraph introduction
 │   ├── Sequential.ipynb # Sequential workflow examples
@@ -28,6 +29,7 @@ This repository contains a collection of examples and implementations using Lang
 - **Memory Agent**: Demonstrates agent memory and state management
 - **Basic Bot**: Simple bot implementation for basic interactions
 - **Drafter**: An interactive document drafting and editing agent that helps users create and modify documents
+- **RAG Agent**: A Retrieval-Augmented Generation agent that answers questions about stock market performance using document retrieval
 
 ### Graph Examples
 
@@ -129,6 +131,28 @@ The agent will:
 2. Allow you to make changes through natural language commands
 3. Save the document when you're finished
 
+### RAG Agent Tools
+
+The RAG agent provides the following capabilities:
+
+- `retriever_tool(query: str)`: Searches and retrieves relevant information from the Stock Market Performance 2024 document
+
+To use the RAG agent:
+
+```python
+from Agents.RAGagent import run_agent
+
+# Start the interactive Q&A session
+run_agent()
+```
+
+The agent will:
+
+1. Load and process the Stock Market Performance 2024 PDF
+2. Create embeddings and store them in a vector database
+3. Allow you to ask questions about the document
+4. Provide answers with relevant citations from the source material
+
 ## Architecture
 
 The project demonstrates various architectural patterns:
@@ -159,6 +183,8 @@ Key dependencies include:
 - typing
 - chromadbx
 - langchain_chroma
+- langchain_text_splitter
+- langchain_community.document_loaders
 
 ## Contributing
 
