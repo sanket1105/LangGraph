@@ -1,10 +1,9 @@
-from typing import TypedDict, List
+from typing import List, TypedDict
+
+from dotenv import load_dotenv
 from langchain_core.messages import HumanMessage
 from langchain_openai import ChatOpenAI
-from langgraph.graph import StateGraph, START, END
-from dotenv import (
-    load_dotenv,
-)  # used to store secret stuff like API keys or configuration values
+from langgraph.graph import END, START, StateGraph
 
 load_dotenv()
 
@@ -30,5 +29,6 @@ agent = graph.compile()
 
 user_input = input("Enter: ")
 while user_input != "exit":
-    agent.invoke({"messages": [HumanMessage(content=user_input)]})
+    # agent.invoke({"messages": [HumanMessage(content=user_input)]})
+    agent.invoke({"messages": user_input})
     user_input = input("Enter: ")
