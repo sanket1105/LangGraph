@@ -9,7 +9,8 @@ This repository contains a collection of examples and implementations using Lang
 ├── Agents/               # Agent implementations
 │   ├── React.py         # ReAct pattern agent with mathematical tools
 │   ├── MemoryAgent.py   # Agent with memory capabilities
-│   └── Bot.py           # Basic bot implementation
+│   ├── Bot.py           # Basic bot implementation
+│   └── Drafter.py       # Document drafting and editing agent
 ├── Graphs/              # Jupyter notebooks with graph examples
 │   ├── HelloWorld.ipynb # Basic LangGraph introduction
 │   ├── Sequential.ipynb # Sequential workflow examples
@@ -26,6 +27,7 @@ This repository contains a collection of examples and implementations using Lang
 - **ReAct Agent**: Implements the ReAct (Reasoning and Acting) pattern with mathematical tools
 - **Memory Agent**: Demonstrates agent memory and state management
 - **Basic Bot**: Simple bot implementation for basic interactions
+- **Drafter**: An interactive document drafting and editing agent that helps users create and modify documents
 
 ### Graph Examples
 
@@ -104,6 +106,28 @@ The ReAct agent comes with the following mathematical tools:
 - `add(a: int, b: int)`: Adds two numbers
 - `subtract(a: int, b: int)`: Subtracts two numbers
 - `multiply(a: int, b: int)`: Multiplies two numbers
+
+### Drafter Agent Tools
+
+The Drafter agent provides the following document management tools:
+
+- `update(content: str)`: Updates the document content with new text
+- `save(filename: str)`: Saves the current document to a text file
+
+To use the Drafter agent:
+
+```python
+from Agents.Drafter import run_document_agent
+
+# Start the interactive document drafting session
+run_document_agent()
+```
+
+The agent will:
+
+1. Prompt you to create or modify document content
+2. Allow you to make changes through natural language commands
+3. Save the document when you're finished
 
 ## Architecture
 
