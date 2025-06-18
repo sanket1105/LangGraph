@@ -7,3 +7,12 @@ dotenv
 typing
 chromadbx
 langchain_chroma
+pandas
+numpy
+scikit-learn
+h2o
+matplotlib
+seaborn
+xgboost
+catboost
+lightgbm

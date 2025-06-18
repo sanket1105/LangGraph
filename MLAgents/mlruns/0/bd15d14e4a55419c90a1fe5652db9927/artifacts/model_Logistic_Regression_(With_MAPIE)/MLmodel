@@ -1,0 +1,21 @@
+artifact_path: model_Logistic_Regression_(With_MAPIE)
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.11.9
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.6.1
+mlflow_version: 2.21.0
+model_size_bytes: 4666
+model_uuid: 7e50b86f5bd647068edeadc209ed1746
+prompts: null
+run_id: bd15d14e4a55419c90a1fe5652db9927
+utc_time_created: '2025-06-14 15:35:17.733903'
